@@ -3,7 +3,6 @@
 import numpy as np
 
 
-# In[2]:
 
 #importing pandas
 import pandas as pd
@@ -26,8 +25,6 @@ print(train_df.head(10))
 #number of missing values
 print(train_df.isnull().sum())
 
-
-# In[3]:
 
 #remove cabin
 train_df = train_df.drop(['Cabin'], axis = 1)
@@ -76,7 +73,7 @@ for dataset in data:
 print(train_df.head(10))   
 
 
-# In[4]:
+
 
 
 #building models
@@ -95,33 +92,27 @@ print(acc_random_forest)
 
 
 
-# In[6]:
 
 print(Y_prediction)
 
 
-# In[8]:
+
 
 prediction =pd.DataFrame(Y_prediction)
 print(prediction)
 
 
-# In[14]:
+
 
 open('test.csv', 'w')
 
 
-# In[15]:
 
 np.savetxt('test.csv',Y_prediction,delimiter=',')
 
 
-# In[20]:
-
-print(Y_prediction)
 
 
-# In[ ]:
 
 
 
